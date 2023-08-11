@@ -1,6 +1,7 @@
 # Bank Customer Churn Prediction
 
 This project aims to predict customer churn for ABC Multistate Bank. The dataset used for this project contains the following columns:
+Dataset Download Link : https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset
 
 `customer_id`: Unused variable.
 
