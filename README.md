@@ -1,15 +1,40 @@
 # Bank Customer Churn Prediction
 
-This project aims to predict customer churn for ABC Multistate Bank. The dataset used for this project contains the following columns:
+This project aims to predict customer churn for ABC Multistate Bank. The dataset used for this project contains various features that may influence customer churn, such as credit score, age, tenure, balance, product usage, credit card status, active membership, estimated salary, and more. The target variable, "churn," indicates whether a customer has left the bank during a specific period (1 if churned, 0 if not).
+
+
+## Getting Started
+To run the project, follow these steps:
+
+1) Clone the repository:
+```
+git clone https://github.com/your-username/bank-customer-churn-prediction.git
+```
+2) Install the required libraries: 
+```
+pip install pandas numpy scikit-learn tensorflow matplotlib streamlit
+```
+3) Open the Jupyter Notebook bank_churn_prediction.ipynb using Jupyter Notebook or any compatible environment.
+
+4) Open the terminal or command prompt and navigate to the repository directory.
+
+5) Run the Streamlit app: `streamlit run streamlit_app.py`
+
+6) The app will open in your default web browser, allowing you to input feature values and see churn predictions.
+
+Note: Please update the file paths if necessary and ensure that the required libraries are installed.
+
+### Dataset
+The dataset used for this project contains the following columns:
 Dataset Download Link : https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset
 
 `customer_id`: Unused variable.
 
 `credit_score`: Used as an input.
 
-`country`: Used as an input.
+`country`: Unused variable.
 
-`gender`: Used as an input.
+`gender`: Unused variable.
 
 `age`: Used as an input.
 
@@ -52,41 +77,27 @@ The predicted probabilities are converted to binary predictions (0 or 1) by usin
 ## Repository Files
 The repository contains the following files:
 
-`bank_churn_prediction.ipynb`: Jupyter Notebook containing the code for data loading, preprocessing, model building, training, and evaluation.
+`dataset` folder contains the Bank Customer Churn Prediction.csv dataset used in the project.
+
+`app.py` is the streamlit application file that defines the API endpoints and loads the saved model.
+
+`models` is folder that contain the serialized machine learning models that is used for prediction.
+
+`customer-churn-prediction-using-ann.ipynb`: Jupyter Notebook containing the code for data loading, preprocessing, model building, training, and evaluation.
+
+`customer_churn_prediction_using_ann 2.ipynb`: Model trained by this jupyter notebook is used in application 
 
 `README.md`: Project documentation and instructions.
 
-## Getting Started
-To run the project, follow these steps:
 
-```
-Clone the repository: git clone https://github.com/your-username/bank-customer-churn-prediction.git
-```
-Install the required libraries: `pip install pandas numpy scikit-learn tensorflow matplotlib`
-```
-Open the Jupyter Notebook bank_churn_prediction.ipynb using Jupyter Notebook or any compatible environment.
-```
-```
-Run the cells in the notebook to execute the code step by step.
-```
-Note: Make sure to update the file paths if necessary.
 
 ## Results and Discussion
 The model achieves an accuracy of 0.8525 on the test data. 
 This means that the model correctly predicts the customer churn status in approximately 85.25% of cases. 
-The loss and accuracy curves plotted during model training can be examined to evaluate the model's performance and identify any overfitting or underfitting issues.
-
-## Further Improvements
-Here are a few suggestions for further improving the project:
-
-Perform more in-depth exploratory data analysis to gain insights into the relationships between features and the target variable.
-Try different preprocessing techniques, such as feature scaling or handling imbalanced classes, to see if they improve the model's performance.
-Experiment with different neural network architectures, such as adding more hidden layers or adjusting the number of units in each layer.
-Use more advanced optimization techniques, such as learning rate schedules or early stopping, to enhance the model's training process.
-Explore other evaluation metrics, such as precision, recall, or F1 score, to get a more comprehensive understanding of the model's performance.
+The loss and accuracy curves plotted during model training can be examined to evaluate the model's performance and identify any overfitting or underfitting issues. The Streamlit app provides users with a simple interface to predict customer churn based on specific feature inputs. 
 
 ## Conclusion
-In this project, we successfully built an Artificial Neural Network (ANN) to predict customer churn for ABC Multistate Bank. By training the model on the provided dataset and evaluating its performance, we achieved an accuracy of 0.8525 on the test data. The results demonstrate the potential of using machine learning techniques for customer churn prediction and provide insights for the bank to take proactive actions to retain customers.
+In this project, we successfully built an Artificial Neural Network (ANN) to predict customer churn for ABC Multistate Bank. By training the model on the provided dataset and evaluating its performance, we achieved an accuracy of 0.8525 on the test data. The results demonstrate the potential of using machine learning techniques for customer churn prediction and provide insights for the bank to take proactive actions to retain customers. we have developed a Streamlit app that predicts customer churn for ABC Multistate Bank based on specific feature inputs
 
-For more details and a step-by-step explanation of the project, please refer to the Jupyter Notebook bank_churn_prediction.ipynb.
+For more details and a step-by-step explanation of the project, please refer to the Jupyter Notebook customer-churn-prediction-using-ann.ipynb.
 
